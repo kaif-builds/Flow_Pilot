@@ -1,0 +1,128 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Production builds
+.next/
+out/
+build/
+dist/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+*.log
+logs/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# Flow
+.flow/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Development files
+*.bak
+emulator.log
+testnet-account.pkey
+flowdb/
+
+# Test and development scripts
+test_*.js
+verify_*.js
+demo_*.js
+*_fix.js
+*_deploy.sh
+quick_fix.sh
+restart_and_deploy.sh
+setup_accounts.sh
+smart_deploy.sh
+fix_and_deploy.sh
+
+# Documentation files (keep main README.md)
+CLEAN_FRONTEND_DEMO.md
+CONSOLE_MESSAGES_EXPLAINED.md
+CONSOLE_WARNINGS_FIXED.md
+DASHBOARD_CARDS_FIXED.md
+EXECUTION_HISTORY_IMPLEMENTED.md
+FINAL_SUCCESS.md
+FRONTEND_MINTING_FIXED.md
+HEADER_LAYOUT_FIXED.md
+LOGOUT_COMPLETELY_FIXED.md
+MINTER_ACCESS_FIXED.md
+NAVIGATION_MENU_FIXED.md
+NO_MORE_ERRORS.md
+ONE_BUTTON_FIXED.md
+PAUSE_AGENT_PL_FIXED.md
+REAL_FORTE_ACTIONS.md
+REAL_WALLET_CONNECTION_FIXED.md
+REAL_WALLET_MINTING_FIXED.md
+SIMPLIFIED_TRANSACTIONS.md
+TESTNET_DEPLOYMENT_SUCCESS.md
+TIMESTAMP_FIXED.md
+TRANSACTION_FIX.md
+WALLET_BALANCE_FIXED.md
+WALLET_CONNECTION_DEBUGGING.md
+WALLET_DISCONNECT_FIXED.md

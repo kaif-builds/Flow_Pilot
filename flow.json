@@ -1,0 +1,110 @@
+{
+	"contracts": {
+		"AgentNFT": {
+			"source": "cadence/contracts/AgentNFT.cdc",
+			"aliases": {
+				"testnet": "8b32c5ecee9fe36f"
+			}
+		},
+		"ForteTransactionScheduler": {
+			"source": "cadence/contracts/ForteTransactionScheduler.cdc",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7",
+				"testnet": "8b32c5ecee9fe36f"
+			}
+		},
+		"FungibleToken": {
+			"source": "cadence/contracts/FungibleToken.cdc",
+			"aliases": {
+				"emulator": "ee82856bf20e2aa6",
+				"testnet": "9a0766d93b6608b7"
+			}
+		},
+		"MockFarm": {
+			"source": "cadence/contracts/MockFarm.cdc",
+			"aliases": {
+				"testnet": "8b32c5ecee9fe36f"
+			}
+		},
+		"MockFarm2": {
+			"source": "cadence/contracts/MockFarm2.cdc",
+			"aliases": {
+				"testnet": "8b32c5ecee9fe36f"
+			}
+		},
+		"MockFarm3": {
+			"source": "cadence/contracts/MockFarm3.cdc",
+			"aliases": {
+				"testnet": "8b32c5ecee9fe36f"
+			}
+		},
+		"MockUSDC": {
+			"source": "cadence/contracts/MockUSDC.cdc",
+			"aliases": {
+				"testnet": "8b32c5ecee9fe36f"
+			}
+		},
+		"NonFungibleToken": {
+			"source": "cadence/contracts/NonFungibleToken.cdc",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7",
+				"testnet": "631e88ae7f1d7c20"
+			}
+		},
+		"ViewResolver": {
+			"source": "cadence/contracts/ViewResolver.cdc",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7",
+				"testnet": "631e88ae7f1d7c20"
+			}
+		}
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": {
+				"type": "file",
+				"location": "emulator-account.pkey"
+			}
+		},
+		"testnet-account": {
+			"address": "8b32c5ecee9fe36f",
+			"key": {
+				"type": "file",
+				"location": "testnet-account.pkey"
+			}
+		}
+	},
+	"deployments": {
+		"emulator": {
+			"emulator-account": [
+				"FungibleToken",
+				"NonFungibleToken",
+				"ViewResolver",
+				"ForteTransactionScheduler",
+				"MockUSDC",
+				"MockFarm",
+				"MockFarm2",
+				"MockFarm3",
+				"AgentNFT"
+			]
+		},
+		"testnet": {
+			"testnet-account": [
+				"FungibleToken",
+				"NonFungibleToken",
+				"ViewResolver",
+				"ForteTransactionScheduler",
+				"MockUSDC",
+				"MockFarm",
+				"MockFarm2",
+				"MockFarm3",
+				"AgentNFT"
+			]
+		}
+	}
+}
