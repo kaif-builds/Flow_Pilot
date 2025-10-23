@@ -10,8 +10,12 @@ type FlowUser = {
   addr?: string | null;
 }
 
-// Handler function to convert FCL CurrentUser to FlowUser
-const handleUserChange = (currentUser: unknown) => {
+interface CurrentUser {
+  loggedIn?: boolean;
+  addr?: string | null;
+}
+
+const handleUserChange = (currentUser: CurrentUser) => {
   const flowUser: FlowUser = {
     loggedIn: currentUser?.loggedIn ?? false,
     addr: currentUser?.addr ?? null
