@@ -7,7 +7,7 @@ export default function WalletSelector() {
   const [isConnecting, setIsConnecting] = useState(false);
 
   // Handler function to convert FCL CurrentUser to our user state
-  const handleUserChange = (currentUser: any) => {
+  const handleUserChange = (currentUser: unknown) => {
     const userState = {
       loggedIn: currentUser?.loggedIn ?? false,
       addr: currentUser?.addr ?? null
