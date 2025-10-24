@@ -378,65 +378,9 @@ export default function LeaderboardsPage() {
                         </p>
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
+                
 
-                {/* Quick Actions */}
-                <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-700/30 shadow-lg hover:shadow-green-400/20 hover:border-green-400 transition-all duration-300 hover:scale-[1.02] backdrop-blur-lg">
-                        <div className="p-4">
-                            <div className="flex items-center gap-3 mb-4">
-                                <div className="p-2 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg border border-green-400/30">
-                                    <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 className="text-xs font-semibold text-green-300 uppercase tracking-wide">Improve Your Ranking</h3>
-                                    <p className="text-xs text-gray-400">Optimize fleet performance</p>
-                                </div>
-                            </div>
-                            <div className="space-y-3">
-                                <button 
-                                    onClick={() => router.push('/dashboard')}
-                                    className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-lg font-medium transition-colors"
-                                >
-                                    Optimize Your Fleet
-                                </button>
-                                <button 
-                                    onClick={() => router.push('/analytics')}
-                                    className="w-full bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-lg font-medium transition-colors"
-                                >
-                                    View Analytics
-                                </button>
-                            </div>
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
-
-                    <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-700/30 shadow-lg hover:shadow-purple-400/20 hover:border-purple-400 transition-all duration-300 hover:scale-[1.02] backdrop-blur-lg">
-                        <div className="p-4">
-                            <div className="flex items-center gap-3 mb-4">
-                                <div className="p-2 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg border border-purple-400/30">
-                                    <svg className="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 className="text-xs font-semibold text-purple-300 uppercase tracking-wide">Explore More</h3>
-                                    <p className="text-xs text-gray-400">Discover new opportunities</p>
-                                </div>
-                            </div>
-                            <div className="space-y-3">
-                                <button
-                                    onClick={() => router.push('/farms')}
-                                    className="w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-3 rounded-lg font-medium transition-colors"
-                                >
-                                    Discover Farms
-                                </button>
-                            </div>
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
+             
                 </div>
             </main>
         </div>
