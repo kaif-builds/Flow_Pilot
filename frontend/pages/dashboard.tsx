@@ -1030,7 +1030,7 @@ export default function DashboardPage() {
                         <button
                             onClick={isFleetListed && agentDetails.length > 0 ? undefined : handleSellFleet}
                             disabled={agentDetails.length === 0 || (isFleetListed && agentDetails.length > 0)}
-                            className={`px-4 py-2.5 text-base font-semibold rounded-lg transition-all duration-200 text-center ${
+                            className={`px-4 py-2.5 text-base font-semibold rounded-lg transition-all duration-200 text-centerabsolute left-[340px] top-0 max-w-[calc(100vw-2rem)] lg:max-w-none ${
                                 isFleetListed && agentDetails.length > 0
                                     ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white cursor-default'
                                     : agentDetails.length > 0 
