@@ -22,10 +22,10 @@ const handleUserChange = (currentUser: CurrentUser) => {
   };
   return flowUser;
 };
-
 export default function Header() {
   const [user, setUser] = useState<FlowUser>({ loggedIn: false, addr: null });
   const [isConnected, setIsConnected] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     // Subscribe to FCL user changes with proper type conversion
@@ -138,13 +138,72 @@ export default function Header() {
         
         {/* Mobile menu button - show on small screens */}
         <div className="md:hidden">
-          <button className="px-2 py-1 text-blue-100 hover:text-white transition">
+          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="px-2 py-1 text-blue-100 hover:text-white transition">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
         </div>
       </nav>
+      
+      {/* Mobile menu dropdown */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-gradient-to-b from-[#10182a] to-gray-900 border-t border-[#21273a]/50">
+          <div className="px-2 pt-2 pb-3 space-y-1">
+            <Link
+              href="/dashboard"
+              className="block px-3 py-2 text-sm rounded-xl font-medium bg-gradient-to-r from-[#1f2741] to-[#212b48] text-blue-100 hover:bg-blue-700/40 hover:text-white transition"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Dashboard
+            </Link>
+            <Link
+              href="/farms"
+              className="block px-3 py-2 text-sm rounded-xl font-medium bg-gradient-to-r from-[#1f2741] to-[#212b48] text-blue-100 hover:bg-blue-700/40 hover:text-white transition"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Farms
+            </Link>
+            <Link
+              href="/analytics"
+              className="block px-3 py-2 text-sm rounded-xl font-medium bg-gradient-to-r from-[#1f2741] to-[#212b48] text-blue-100 hover:bg-blue-700/40 hover:text-white transition"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Analytics
+            </Link>
+            <Link
+              href="/leaderboards"
+              className="block px-3 py-2 text-sm rounded-xl font-medium bg-gradient-to-r from-[#1f2741] to-[#212b48] text-blue-100 hover:bg-blue-700/40 hover:text-white transition"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Leaderboards
+            </Link>
+            <Link
+              href="/buy-sell"
+              className="block px-3 py-2 text-sm rounded-xl font-medium bg-gradient-to-r from-[#1f2741] to-[#212b48] text-blue-100 hover:bg-blue-700/40 hover:text-white transition"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Buy/Sell
+            </Link>
+            
+            <div className="pt-2">
+              <WalletSelector />
+            </div>
+            
+            {isAuthenticated && (
+              <button
+                onClick={() => {
+                  handleLogout();
+                  setMobileMenuOpen(false);
+                }}
+                className="w-full mt-2 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-bold py-2 px-3 rounded-lg shadow-md transition text-sm"
+              >
+                Logout
+              </button>
+            )}
+          </div>
+        </div>
+      )}
     </header>
   );
 }
