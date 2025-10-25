@@ -878,44 +878,44 @@ export default function DashboardPage() {
                 </div>
             )}
             {/* Responsive Wallet Balance */}
-            <div className="absolute top-16 sm:top-20 right-1 sm:right-2 md:right-4 z-10">
-                <div className="inline-flex items-center gap-1 sm:gap-2 md:gap-3 px-2 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 bg-white/5 border border-white/10 rounded-lg sm:rounded-xl shadow-md backdrop-blur-md">
-                    <span className="text-xs sm:text-sm md:text-base font-medium">Balance</span>
-                    <span className="text-xs sm:text-sm md:text-lg font-bold text-cyan-300">
-                        {userBalance.toFixed(2)} USDC
-                    </span>
-                    <button
-                        onClick={() => {
-                            // Clear any pending refresh timeouts to prevent override
-                            timeoutRefs.current.forEach(timeout => clearTimeout(timeout));
-                            timeoutRefs.current = [];
-                            
-                            // Reset balance back to 1000.0
-                            const resetBalance = 1000.0;
-                            setUserBalance(resetBalance);
-                            localStorage.setItem('userBalance', resetBalance.toString());
-                            localStorage.setItem('balanceManuallyReset', 'true');
-                            
-                            console.log('✅ Balance reset to 1000 USDC!');
-                        }}
-                        className="ml-1 sm:ml-2 p-1 rounded-full hover:bg-white/10 transition-colors"
-                        title="Reset balance to 1000 usdc for demo purpose"
-                    >
-                        <svg 
-                            className="w-3 h-3 sm:w-4 sm:h-4 text-cyan-300" 
-                            fill="none" 
-                            stroke="currentColor" 
-                            viewBox="0 0 24 24"
-                        >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                        </svg>
-                    </button>
-                </div>
-                <p className="text-[10px] sm:text-[11px] text-gray-500 text-right mt-1 mr-1 sm:mr-2 md:mr-6 max-w-[200px] sm:max-w-none">
-                    For demo purposes, users can also mint agents without connecting a wallet.
-                </p>
-            </div>
-            <main className="max-w-7xl mx-auto px-4 py-4 mt-8">
+<div className="absolute top-16 sm:top-20 right-1 sm:right-2 md:right-4 z-10">
+    <div className="inline-flex items-center gap-1 sm:gap-2 md:gap-3 px-2 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 bg-white/5 border border-white/10 rounded-lg sm:rounded-xl shadow-md backdrop-blur-md">
+        <span className="text-xs sm:text-sm md:text-base font-medium">Balance</span>
+        <span className="text-xs sm:text-sm md:text-lg font-bold text-cyan-300">
+            {userBalance.toFixed(2)} USDC
+        </span>
+        <button
+            onClick={() => {
+                // Clear any pending refresh timeouts to prevent override
+                timeoutRefs.current.forEach(timeout => clearTimeout(timeout));
+                timeoutRefs.current = [];
+                
+                // Reset balance back to 1000.0
+                const resetBalance = 1000.0;
+                setUserBalance(resetBalance);
+                localStorage.setItem('userBalance', resetBalance.toString());
+                localStorage.setItem('balanceManuallyReset', 'true');
+                
+                console.log('✅ Balance reset to 1000 USDC!');
+            }}
+            className="ml-1 sm:ml-2 p-1 rounded-full hover:bg-white/10 transition-colors"
+            title="Reset balance to 1000 usdc for demo purpose"
+        >
+            <svg 
+                className="w-3 h-3 sm:w-4 sm:h-4 text-cyan-300" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+            >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+        </button>
+    </div>
+    <p className="hidden md:block text-[11px] text-gray-500 text-right mt-1 mr-6">
+        For demo purposes, users can also mint agents without connecting a wallet.
+    </p>
+</div>
+<main className="max-w-7xl mx-auto px-4 py-4 mt-8">
 
 
                 {/* Centered title above agents */}
