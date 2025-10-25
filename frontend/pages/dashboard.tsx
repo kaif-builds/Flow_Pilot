@@ -1025,22 +1025,22 @@ export default function DashboardPage() {
                         <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                     
-                    {/* Sell Fleet Button - Positioned just right of profit box */}
-                    <div className="absolute bottom-0 right-0 transform translate-x-32 -translate-y-1/2">
-                        <button
-                            onClick={isFleetListed && agentDetails.length > 0 ? undefined : handleSellFleet}
-                            disabled={agentDetails.length === 0 || (isFleetListed && agentDetails.length > 0)}
-                            className={`px-4 py-2.5 text-base font-semibold rounded-lg transition-all duration-200 text-centerabsolute left-[340px] top-0 max-w-[calc(100vw-2rem)] lg:max-w-none ${
-                                isFleetListed && agentDetails.length > 0
-                                    ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white cursor-default'
-                                    : agentDetails.length > 0 
-                                        ? 'bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white hover:shadow-lg' 
-                                        : 'bg-gray-600 text-gray-400 cursor-not-allowed'
-                            }`}
-                        >
-                            {isFleetListed && agentDetails.length > 0 ? 'Listed' : 'Sell Fleet'}
-                        </button>
-                    </div>
+                    {/* Sell Fleet Button - Responsive positioning */}
+<div className="absolute bottom-0 right-0 lg:transform lg:translate-x-32 lg:-translate-y-1/2 -translate-y-1/2">
+    <button
+        onClick={isFleetListed && agentDetails.length > 0 ? undefined : handleSellFleet}
+        disabled={agentDetails.length === 0 || (isFleetListed && agentDetails.length > 0)}
+        className={`px-4 py-2.5 text-base font-semibold rounded-lg transition-all duration-200 text-center w-full lg:w-auto ${
+            isFleetListed && agentDetails.length > 0
+                ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white cursor-default'
+                : agentDetails.length > 0 
+                    ? 'bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white hover:shadow-lg' 
+                    : 'bg-gray-600 text-gray-400 cursor-not-allowed'
+        }`}
+    >
+        {isFleetListed && agentDetails.length > 0 ? 'Listed' : 'Sell Fleet'}
+    </button>
+</div>
                 </div>
                 {/* Empty agent state */}
                 {agentDetails.length === 0 ? (
