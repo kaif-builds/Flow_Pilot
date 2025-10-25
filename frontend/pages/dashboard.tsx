@@ -912,7 +912,7 @@ export default function DashboardPage() {
         </button>
     </div>
     <p className="hidden md:block text-[11px] text-gray-500 text-right mt-1 mr-6">
-        Mock balance for demo purposes.
+       Mock balance for testing.
     </p>
 </div>
 <main className="max-w-7xl mx-auto px-4 py-4 mt-8">
