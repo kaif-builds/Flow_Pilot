@@ -911,7 +911,7 @@ export default function DashboardPage() {
             </svg>
         </button>
     </div>
-    <p className="hidden md:block text-[11px] text-gray-500 text-right mt-1 mr-12">
+    <p className="hidden md:block text-[11px] text-gray-500 text-right mt-1 mr-16">
        Mock balance for testing.
     </p>
 </div>
