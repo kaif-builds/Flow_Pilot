@@ -954,7 +954,7 @@ export default function DashboardPage() {
                                     if (agentDetails.length === 0) return '0';
                                     if (isDemoMode) {
                                         const mintedAgents = JSON.parse(sessionStorage.getItem('demoMintedAgents') || '[]');
-                                        const totalValue = mintedAgents.reduce((sum: number, agent: any) => sum + (agent.cost * 1.3), 0);
+                                        const totalValue = mintedAgents.reduce((sum: number, agent: any) => sum + (agent.cost * 1.5), 0);
                                         return totalValue.toLocaleString();
                                     } else {
                                         let totalValue = 0;
@@ -1003,7 +1003,7 @@ export default function DashboardPage() {
                                     if (agentDetails.length === 0) return '$0';
                                     if (isDemoMode) {
                                         const mintedAgents = JSON.parse(sessionStorage.getItem('demoMintedAgents') || '[]');
-                                        const totalProfit = mintedAgents.reduce((sum: number, agent: any) => sum + (agent.cost * 0.5), 0);
+                                        const totalProfit = mintedAgents.reduce((sum: number, agent: any) => sum + (agent.cost * 0.7), 0);
                                         return `+$${totalProfit.toLocaleString()}`;
                                     } else {
                                         let totalProfit = 0;
