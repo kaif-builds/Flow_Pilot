@@ -912,8 +912,7 @@ export default function DashboardPage() {
         </button>
     </div>
 <p className="hidden md:block text-[11px] text-gray-500 text-left mt-1 ml-4">
-   For demo purposes, the app includes a local simulation mode. <br />
-   Connect Flow wallet for real on-chain transactions.
+   Connect wallet for real on-chain transactions.
 </p>
 </div>
 <main className="max-w-7xl mx-auto px-4 py-4 mt-8">
