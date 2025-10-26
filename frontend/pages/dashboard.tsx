@@ -911,7 +911,7 @@ export default function DashboardPage() {
             </svg>
         </button>
     </div>
-   <p className="hidden md:block text-[11px] text-gray-500 text-right mt-1 mr-6">
+<p className="hidden md:block text-[11px] text-gray-500 text-left mt-1 ml-6">
    For demo purposes, the app includes a local simulation mode. <br />
    Connect Flow wallet for real on-chain transactions.
 </p>
