@@ -911,7 +911,7 @@ export default function DashboardPage() {
             </svg>
         </button>
     </div>
-<p className="hidden md:block text-[11px] text-gray-500 text-left mt-1 ml-4">
+<p className="hidden md:block text-[11px] text-gray-500 text-left mt-1 ml-6">
    Connect wallet for real on-chain transactions.
 </p>
 </div>
