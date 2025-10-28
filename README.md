@@ -63,7 +63,7 @@ Here are some essential resources to help you hit the ground running:
 - **[Block Explorers](https://developers.flow.com/ecosystem/block-explorers)** - Block explorers are tools that allow you to explore on-chain data.  You can use them to view transactions, accounts, events, and other information.  [Flowser](https://flowser.dev/) is a powerful block explorer for local development on the Flow Emulator.
 
 ## 📦 Project Structure
-
+```
 Pilot_FINAL/
 ├── cadence/              # Flow smart contract resources
 │   ├── contracts/        # Cadence smart contracts (.cdc)
@@ -77,7 +77,7 @@ Pilot_FINAL/
 │   └── flow.config.js    # Flow client library (FCL) configuration
 ├── flow.json             # Flow project global configuration
 └── *.sh                  # Shell scripts for setup/deployment
-
+```
 
 ## 🚀 Quick Start
 
