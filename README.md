@@ -8,8 +8,9 @@ A comprehensive DeFi platform built on the Flow blockchain, featuring yield farm
 
 ## 🌐 Live Demo & Resources
 
-- **Vercel Live Demo:** [https://flow-pilot-2gpx.vercel.app/](https://flow-pilot-2gpx.vercel.app/)
-- **YouTube Video Demo:** [https://youtu.be/qoouz4My9OI](https://youtu.be/qoouz4My9OI)
+- **Vercel Live Demo:** (https://flow-pilot-2gpx.vercel.app/)
+- **YouTube Video Demo:** (https://youtu.be/qoouz4My9OI)
+- **View on Testnet : (https://testnet.flowscan.io/account/0x8b32c5ecee9fe36f)
 - **Testnet Account Address:** `0x8b32c5ecee9fe36f`
 
 ---
