@@ -282,8 +282,6 @@ http://localhost:3000
 
 - Flow Blockchain Team
 - Cadence Language Developers
-- Next.js Team
-- Open Source Community
 
 ---
 
