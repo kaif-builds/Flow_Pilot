@@ -18,223 +18,462 @@ A comprehensive DeFi platform built on the Flow blockchain, featuring yield farm
 
 ## 🎯 Project Overview
 
-Flow Pilot leverages Forte Actions—Flow's revolutionary transaction scheduling—to enable true on-chain DeFi automation. Users mint AI trading agents as NFTs, deposit tokens into mock yield farms, and enable automated strategies that execute and adapt, without manual intervention.
+Flow Pilot leverages Forte Actions Flow's revolutionary transaction scheduling—to enable true on-chain DeFi automation. Users mint AI trading agents as NFTs, deposit tokens into mock yield farms, and enable automated strategies that execute and adapt, without manual intervention.
 
-### Key Features
+## 📋 Table of Contents
 
-- 🤖 **AI Trading Agents:** Mint agent NFTs with strategic automation
-- 🌾 **Yield Farming:** Multiple mock farms with various APYs and strategies
-- ⚡ **Forte Actions:** On-chain, scheduled, automated transactions
-- 💰 **MockUSDC Integration:** Fungible token for on-chain deposits/rewards
-- 📊 **Analytics:** Real-time agent and farm statistics, leaderboards
-- 🎨 **Modern UI:** Responsive, premium frontend (Next.js + Tailwind CSS)
+- Features
+- Tech Stack
+- Prerequisites
+- Project Structure
+- Installation & Setup
+- Running the Application
+- Troubleshooting
+- Contributing
 
----
+## ✨ Features
 
-## 🏗️ Architecture
+- **Create AI Agent NFTs**: Design unique AI agents with custom personalities, skills, and attributes
+- **NFT Marketplace**: Buy and sell Agent NFTs with other users
+- **Personal Dashboard**: View and manage your NFT collection
+- **Wallet Integration**: Connect with Flow wallet for secure transactions
+- **Real-time Updates**: Live marketplace listings and transaction status
 
-### Smart Contracts (Cadence)
-- `AgentNFT.cdc` — NFT contract for agents & strategies
-- `ForteTransactionScheduler.cdc` — Forte Actions custom scheduler
-- `MockUSDC.cdc` — Fungible token (deposits & rewards)
-- `MockFarm*.cdc` — Multiple mock farm contracts (APY/risk profiles)
-- `FlowTransactionScheduler.cdc` — Native transaction scheduler integration
+## 🛠 Tech Stack
 
-### Frontend (Next.js + React)
-- **Dashboard:** Monitor portfolio, agents, profits, fleet
-- **Forte Actions:** Enable/disable automation, view execution history
-- **Farms:** Mint agents, deposit/withdraw tokens
-- **Analytics:** Agent/farm performance, leaderboards, visualizations
-- **Agent Management:** Configure trading strategies
+### Frontend
 
----
+- **Next.js**  - React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first styling
+- **FCL (Flow Client Library)** - Flow blockchain integration
 
+### Blockchain
 
-This project is a starting point for you to develop smart contracts on the Flow Blockchain. It comes with example contracts, scripts, transactions, and tests to help you get started.
+- **Flow Blockchain** - Layer 1 blockchain
+- **Cadence** - Smart contract language
+- **Flow CLI** - Development tools
 
-## 🔨 Getting Started
+### Backend/Tools
 
-Here are some essential resources to help you hit the ground running:
+- **Flow Emulator** - Local blockchain for development
+- **Flow Dev Wallet** - Local wallet for testing
 
-- **[Flow Documentation](https://developers.flow.com/)** - The official Flow Documentation is a great starting point to start learning about [building](https://developers.flow.com/build/flow) on Flow.
-- **[Cadence Documentation](https://cadence-lang.org/docs/language)** - Cadence is the native language for the Flow Blockchain. It is a resource-oriented programming language that is designed for developing smart contracts.  The documentation is a great place to start learning about the language.
-- **[Visual Studio Code](https://code.visualstudio.com/)** and the **[Cadence Extension](https://marketplace.visualstudio.com/items?itemName=onflow.cadence)** - It is recommended to use the Visual Studio Code IDE with the Cadence extension installed.  This will provide syntax highlighting, code completion, and other features to support Cadence development.
-- **[Flow Clients](https://developers.flow.com/tools/clients)** - There are clients available in multiple languages to interact with the Flow Blockchain.  You can use these clients to interact with your smart contracts, run transactions, and query data from the network.
-- **[Block Explorers](https://developers.flow.com/ecosystem/block-explorers)** - Block explorers are tools that allow you to explore on-chain data.  You can use them to view transactions, accounts, events, and other information.  [Flowser](https://flowser.dev/) is a powerful block explorer for local development on the Flow Emulator.
+## 📦 Prerequisites
 
-## 📦 Project Structure
+Before you begin, ensure you have the following installed:
+
+### Required Software
+
+1. **Node.js** (v18 or higher)
+    
+    ```bash
+    node --version  # Should be v18+
+    
+    ```
+    
+    Download from: https://nodejs.org/
+    
+2. **npm** or **yarn**
+    
+    ```bash
+    npm --version  # Should be 9+
+    
+    ```
+    
+3. **Flow CLI**
+    
+    ```bash
+    # Install Flow CLI
+    sh -ci "$(curl -fsSL https://raw.githubusercontent.com/onflow/flow-cli/master/install.sh)"
+    
+    # Verify installation
+    flow version
+    
+    ```
+    
+4. **Git**
+    
+    ```bash
+    git --version
+    
+    ```
+    
+
+## 📁 Project Structure
+
 ```
 Pilot_FINAL/
-├── cadence/              # Flow smart contract resources
-│   ├── contracts/        # Cadence smart contracts (.cdc)
-│   ├── scripts/          # Read-only scripts for data queries
-│   ├── transactions/     # State-changing transaction scripts
-│   └── tests/            # Unit and integration tests
-├── frontend/             # Next.js + React frontend application
-│   ├── components/       # Modular React components
-│   ├── pages/            # Next.js page routes
-│   ├── styles/           # Tailwind/CSS stylesheets
-│   └── flow.config.js    # Flow client library (FCL) configuration
-├── flow.json             # Flow project global configuration
-└── *.sh                  # Shell scripts for setup/deployment
+├── frontend/               # Next.js application
+│   ├── pages/             # Pages directory
+│   │   ├── dashboard.tsx  # User dashboard
+│   │   ├── leaderboards.tsx # Leaderboards page
+│   │   ├── buy-sell.tsx   # Buy/Sell marketplace
+│   │   ├── analytics.tsx  # Analytics page
+│   │   └── app.tsx        # Main app component
+│   ├── components/        # React components
+│   ├── lib/              # Utilities and helpers
+│   └── flow/             # Flow configuration
+│       └── config.ts     # FCL configuration
+├── cadence/              # Smart contracts
+│   ├── contracts/        # Contract files
+│   │   └── AgentNFT.cdc  # Main NFT contract
+│   ├── transactions/     # Transaction scripts
+│   └── scripts/          # Query scripts
+├── flow.json            # Flow project configuration
+└── README.md           # This file
+
 ```
 
-## 🚀 Quick Start
+## 🚀 Installation & Setup
 
-### Prerequisites
-- Node.js 18+ and npm
-- Flow CLI installed
-- Git
+### Step 1: Clone the Repository
 
-## Running the Existing Project
+```bash
+git clone https://github.com/yourusername/Pilot_FINAL.git
+cd Pilot_FINAL
 
-### Executing the `GetCounter` Script
-
-To run the `GetCounter` script, use the following command:
-
-```shell
-flow scripts execute cadence/scripts/GetCounter.cdc
 ```
 
-### Sending the `IncrementCounter` Transaction
+### Step 2: Install Frontend Dependencies
 
-To run the `IncrementCounter` transaction, use the following command:
+```bash
+cd frontend
+npm install
+# or
+yarn install
 
-```shell
-flow transactions send cadence/transactions/IncrementCounter.cdc
 ```
 
-To learn more about using the CLI, check out the [Flow CLI Documentation](https://developers.flow.com/tools/flow-cli).
+### Step 3: Configure Flow Project
 
-## 👨‍💻 Start Developing
+The `flow.json` file should already be configured.
 
-### Creating a New Contract
+### Step 4: Set Up Environment Variables
 
-To add a new contract to your project, run the following command:
+Create a `.env.local` file in the `frontend` directory:
 
-```shell
-flow generate contract
+```bash
+cd frontend
+touch .env.local
+
 ```
 
-This command will create a new contract file and add it to the `flow.json` configuration file.
+Add the following variables:
 
-### Creating a New Script
+```
+NEXT_PUBLIC_FLOW_NETWORK=emulator
+NEXT_PUBLIC_ACCESS_NODE=http://localhost:8888
+NEXT_PUBLIC_WALLET_DISCOVERY=http://localhost:8701/fcl/authn
+NEXT_PUBLIC_CONTRACT_ADDRESS=0xf8d6e0586b0a20c7
 
-To add a new script to your project, run the following command:
-
-```shell
-flow generate script
 ```
 
-This command will create a new script file.  Scripts are used to read data from the blockchain and do not modify state (i.e. get the current balance of an account, get a user's NFTs, etc).
+## 🏃 Running the Application
 
-You can import any of your own contracts or installed dependencies in your script file using the `import` keyword.  For example:
+You need **3 terminal windows** running simultaneously. Follow these steps in order:
 
-```cadence
-import "Counter"
+### Terminal 1: Start the Flow Emulator
+
+```bash
+# Navigate to project root
+cd Pilot_FINAL
+
+# Start the emulator
+flow emulator
+
 ```
 
-### Creating a New Transaction
+You should see:
 
-To add a new transaction to your project you can use the following command:
+```
+INFO[0000] ⚙️   Using service account 0xf8d6e0586b0a20c7
+INFO[0000] 📜  Flow contract debugger enabled
+INFO[0000] 🌱  Starting emulator...
+INFO[0000] ✅  Emulator started on port 3569
 
-```shell
-flow generate transaction
 ```
 
-This command will create a new transaction file.  Transactions are used to modify the state of the blockchain (i.e purchase an NFT, transfer tokens, etc).
+**⚠️ Keep this terminal running!** Do not close it.
 
-You can import any dependencies as you would in a script file.
+---
 
-### Creating a New Test
+### Terminal 2: Deploy Smart Contracts
 
-To add a new test to your project you can use the following command:
+Open a **new terminal window**:
 
-```shell
-flow generate test
+```bash
+# Navigate to project root (if not already there)
+cd Pilot_FINAL
+
+# Deploy contracts to emulator
+flow project deploy
+
 ```
 
-This command will create a new test file.  Tests are used to verify that your contracts, scripts, and transactions are working as expected.
+**First time deployment:** Use `flow project deploy`
 
-### Installing External Dependencies
+**If updating contracts:** Use `flow project deploy --update`
 
-If you want to use external contract dependencies (such as NonFungibleToken, FlowToken, FungibleToken, etc.) you can install them using [Flow CLI Dependency Manager](https://developers.flow.com/tools/flow-cli/dependency-manager).
+You should see:
 
-For example, to install the NonFungibleToken contract you can use the following command:
+```
+Deploying 1 contracts for accounts: emulator-account
 
-```shell
-flow deps add mainnet://1d7e57aa55817448.NonFungibleToken
+AgentNFT -> 0xf8d6e0586b0a20c7
+
+✅ All contracts deployed successfully
+
 ```
 
-Contracts can be found using [ContractBrowser](https://contractbrowser.com/), but be sure to verify the authenticity before using third-party contracts in your project.
+**Note:** This terminal can be closed after successful deployment, or keep it open for redeployment.
 
-## 🧪 Testing
+---
 
-To verify that your project is working as expected you can run the tests using the following command:
+### Terminal 3: Start the Frontend
 
-```shell
-flow test
+Open a **new terminal window**:
+
+```bash
+# Navigate to frontend folder
+cd frontend
+
+# Start the development server
+npm run dev
+
 ```
 
-This command will run all tests with the `_test.cdc` suffix (these can be found in the `cadence/tests` folder). You can add more tests here using the `flow generate test` command (or by creating them manually).
+You should see:
 
-To learn more about testing in Cadence, check out the [Cadence Test Framework Documentation](https://cadence-lang.org/docs/testing-framework).
+```
+▲ Next.js 14.x.x
+- Local:        http://localhost:3000
+- Ready in 2.5s
 
-## 🚀 Deploying Your Project
-
-To deploy your project to the Flow network, you must first have a Flow account and have configured your deployment targets in the `flow.json` configuration file.
-
-You can create a new Flow account using the following command:
-
-```shell
-flow accounts create
 ```
 
-Learn more about setting up deployment targets in the [Flow CLI documentation](https://developers.flow.com/tools/flow-cli/deployment/project-contracts).
+**⚠️ Keep this terminal running!** Do not close it.
 
-### Deploying to the Flow Emulator
+---
 
-To deploy your project to the Flow Emulator, start the emulator using the following command:
+### ✅ Access the Application
 
-```shell
-flow emulator --start
+Open your browser and navigate to:
+
+```
+http://localhost:3000
+
 ```
 
-To deploy your project, run the following command:
+**Summary - What Should Be Running:**
 
-```shell
-flow project deploy --network=emulator
+- ✅ Terminal 1: `flow emulator` (port 3569)
+- ✅ Terminal 2: Closed or idle (deployment done)
+- ✅ Terminal 3: `npm run dev` in frontend folder (port 3000)
+
+## 🔗 Connect Your Wallet
+
+1. Click **"Connect Wallet"** button in the application
+2. Your wallet connection interface will appear
+3. Follow the prompts to connect your Flow wallet
+4. Approve the connection
+
+## 💡 Using the Platform
+
+### Available Pages
+
+Navigate through the platform using these pages:
+
+1. **Dashboard** (`/dashboard`)
+    - View and manage your Agent NFT collection
+    - See all your minted NFTs
+    - Access NFT details and actions
+2. **Buy/Sell** (`/buy-sell`)
+    - Browse marketplace listings
+    - Purchase Agent NFTs from other users
+    - List your NFTs for sale
+3. **Leaderboards** (`/leaderboards`)
+    - View top collectors and traders
+    - Track marketplace statistics
+    - See trending Agent NFTs
+4. **Analytics** (`/analytics`)
+    - View market trends and data
+    - Analyze NFT performance
+    - Track your collection value
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+### 1. "Cannot connect to Flow Emulator"
+
+**Solution**:
+
+- Ensure the emulator is running: `flow emulator start`
+- Check if port 3569 is available
+- Restart the emulator
+
+### 2. "Contract not found"
+
+**Solution**:
+
+```bash
+# Redeploy with update flag
+flow project deploy --update
+
 ```
 
-This command will start the Flow Emulator and deploy your project to it. You can now interact with your project using the Flow CLI or alternate [client](https://developers.flow.com/tools/clients).
+### 3. "Transaction failed: account not set up"
 
-### Deploying to Flow Testnet
+**Solution**: Initialize your account first by running the setup transaction
 
-To deploy your project to Flow Testnet you can use the following command:
+### 4. Frontend not loading
 
-```shell
+**Solution**:
+
+```bash
+cd frontend
+rm -rf .next node_modules
+npm install
+npm run dev
+
+```
+
+### 5. "Cannot find type in scope" errors
+
+**Solution**: This is a smart contract issue. Check:
+
+- Contract is properly deployed
+- Public interfaces are correctly defined
+- Script is using the correct paths
+
+### Checking Emulator Status
+
+```bash
+# Check accounts
+flow accounts get 0xf8d6e0586b0a20c7 --network=emulator
+
+# Check deployed contracts
+flow accounts get 0xf8d6e0586b0a20c7 --network=emulator | grep -A 5 "Contracts"
+
+```
+
+### Viewing Logs
+
+**Emulator Logs**: Check the terminal where emulator is running
+
+**Frontend Logs**: Check browser console (F12)
+
+**Transaction Logs**: Visible in emulator terminal output
+
+## 📝 Smart Contract Reference
+
+### Main Contract: AgentNFT
+
+**Location**: `cadence/contracts/AgentNFT.cdc`
+
+**Key Resources**:
+
+- `NFT`: Individual Agent NFT
+- `Collection`: User's NFT collection
+- `Minter`: Admin minting capability
+
+**Public Functions**:
+
+- `mintNFT()`: Create a new Agent NFT
+- `borrowNFT()`: Get NFT reference
+- `getIDs()`: List owned NFT IDs
+
+### Transactions
+
+**Location**: `cadence/transactions/`
+
+- `setup_account.cdc`: Initialize user account
+- `mint_nft.cdc`: Mint new Agent NFT
+- `transfer_nft.cdc`: Transfer NFT to another account
+- `list_for_sale.cdc`: List NFT on marketplace
+
+### Scripts
+
+**Location**: `cadence/scripts/`
+
+- `get_nfts.cdc`: Get user's NFT IDs
+- `get_nft_metadata.cdc`: Get specific NFT details
+- `get_marketplace_listings.cdc`: Get all marketplace listings
+
+## 🔄 Development Workflow
+
+### Making Changes to Smart Contracts
+
+1. Edit contract in `cadence/contracts/AgentNFT.cdc`
+2. Redeploy:
+    
+    ```bash
+    flow project deploy --network=emulator --update
+    
+    ```
+    
+3. Restart frontend if needed
+
+### Adding New Features
+
+1. Create new transaction or script in `cadence/`
+2. Add corresponding function in `frontend/lib/flow/`
+3. Integrate with UI components
+
+## 🌐 Deploying to Testnet
+
+### Step 1: Get Testnet Account
+
+1. Create account at: https://testnet-faucet.onflow.org/
+2. Save your address and private key
+
+### Step 2: Update flow.json
+
+### Step 3: Deploy
+
+```bash
 flow project deploy --network=testnet
+
 ```
 
-This command will deploy your project to Flow Testnet. You can now interact with your project on this network using the Flow CLI or any other Flow client.
+### Step 4: Update Frontend Config
 
-### Deploying to Flow Mainnet
+```
+NEXT_PUBLIC_FLOW_NETWORK=testnet
+NEXT_PUBLIC_ACCESS_NODE=https://rest-testnet.onflow.org
+NEXT_PUBLIC_WALLET_DISCOVERY=https://fcl-discovery.onflow.org/testnet/authn
+NEXT_PUBLIC_CONTRACT_ADDRESS=YOUR_TESTNET_ADDRESS
 
-To deploy your project to Flow Mainnet you can use the following command:
-
-```shell
-flow project deploy --network=mainnet
 ```
 
-This command will deploy your project to Flow Mainnet. You can now interact with your project using the Flow CLI or alternate [client](https://developers.flow.com/tools/clients).
+## 🤝 Contributing
 
-## 📚 Other Resources
+Contributions are welcome! Please follow these steps:
 
-- [Cadence Design Patterns](https://cadence-lang.org/docs/design-patterns)
-- [Cadence Anti-Patterns](https://cadence-lang.org/docs/anti-patterns)
-- [Flow Core Contracts](https://developers.flow.com/build/core-contracts)
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/AmazingFeature`
+3. Commit your changes: `git commit -m 'Add some AmazingFeature'`
+4. Push to the branch: `git push origin feature/AmazingFeature`
+5. Open a Pull Request
 
-## 🤝 Community
-- [Flow Community Forum](https://forum.flow.com/)
-- [Flow Discord](https://discord.gg/flow)
-- [Flow Twitter](https://x.com/flow_blockchain)
+## *Built with ❤️ for the hackathon*
+
+## 📞 Support
+
+- **Documentation**: https://developers.flow.com/
+- **Discord**: https://discord.gg/flow
+- **GitHub Issues**: https://github.com/yourusername/Pilot_FINAL/issues
+
+## 🙏 Acknowledgments
+
+- Flow Blockchain Team
+- Cadence Language Developers
+- Next.js Team
+- Open Source Community
+
+---
+
+**Happy Building! 🚀**
+
+For questions or issues, please open a GitHub issue or reach out on Discord.
