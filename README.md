@@ -4,14 +4,6 @@
 
 A comprehensive DeFi platform built on the Flow blockchain, featuring yield farming, and AI-powered trading agents. Flow Pilot demonstrates the future of decentralized finance with automated transaction scheduling, composable agent strategies, and a beautiful modern UI.
 
-
-## 🏅Prize Criteria Fulfillment
-
-Below are the major hackathon prize categories that Flow Pilot fulfills, with explanations and highlights:
-
-<img width="740" height="622" alt="tabel" src="https://github.com/user-attachments/assets/0fc9407c-d6d5-421b-aec3-0d2e1f3e386a" />
-
-
 ---
 
 ## 🌐 Live Demo & Resources
@@ -28,6 +20,11 @@ Below are the major hackathon prize categories that Flow Pilot fulfills, with ex
 
 Flow Pilot leverages Forte Actions Flow's revolutionary transaction scheduling to enable true on-chain DeFi automation. Users mint AI trading agents as NFTs, deposit tokens into mock yield farms, and enable automated strategies that execute and adapt, without manual intervention.
 
+## 🏅Prize Criteria Fulfillment
+
+Below are the major hackathon prize categories that Flow Pilot fulfills, with explanations and highlights:
+
+<img width="740" height="622" alt="tabel" src="https://github.com/user-attachments/assets/0fc9407c-d6d5-421b-aec3-0d2e1f3e386a" />
 
 
 ## 📋 Table of Contents
