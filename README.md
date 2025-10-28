@@ -32,10 +32,11 @@ Below are the major hackathon prize categories that Flow Pilot fulfills, with ex
 - [Features]
 - [Tech Stack]
 - [Prerequisites]
+- [Project Structure]
 - [Installation & Setup]
 - [Running the Application]
 - [Using the Platform]
-- [Project Structure]
+
 
 - [Contributing]
 
@@ -99,6 +100,36 @@ git --version
 ```
 
 ---
+
+## 📁 Project Structure
+
+```
+Pilot_FINAL/
+├── frontend/               # Next.js application
+│   ├── pages/             # Pages directory
+│   │   ├── dashboard.tsx  # User dashboard - View collection
+│   │   ├── leaderboards.tsx # Rankings and leaderboards
+│   │   ├── buy-sell.tsx   # Buy/Sell marketplace
+│   │   ├── analytics.tsx  # Analytics and data
+│   │   ├── farms.tsx      # Mint new Agent NFTs
+│   │   └── app.tsx        # Main app component
+│   ├── components/        # React components
+│   ├── flow/             # Flow blockchain configuration
+│   │   └── config.js     # FCL configuration (Testnet)
+│   ├── public/           # Static assets
+│   ├── styles/           # CSS styles
+│   └── package.json      # Dependencies
+├── cadence/              # Smart contracts
+│   ├── contracts/        # Contract files
+│   │   └── AgentNFT.cdc  # Main NFT contract
+│   ├── transactions/     # Transaction scripts
+│   └── scripts/          # Query scripts
+├── .gitignore           # Git ignore rules
+├── flow.json            # Flow project configuration
+└── README.md           # This file
+
+```
+
 
 ## 🚀 Installation & Setup
 
@@ -230,34 +261,6 @@ http://localhost:3000
 
 ---
 
-## 📁 Project Structure
-
-```
-Pilot_FINAL/
-├── frontend/               # Next.js application
-│   ├── pages/             # Pages directory
-│   │   ├── dashboard.tsx  # User dashboard - View collection
-│   │   ├── leaderboards.tsx # Rankings and leaderboards
-│   │   ├── buy-sell.tsx   # Buy/Sell marketplace
-│   │   ├── analytics.tsx  # Analytics and data
-│   │   ├── farms.tsx      # Mint new Agent NFTs
-│   │   └── app.tsx        # Main app component
-│   ├── components/        # React components
-│   ├── flow/             # Flow blockchain configuration
-│   │   └── config.js     # FCL configuration (Testnet)
-│   ├── public/           # Static assets
-│   ├── styles/           # CSS styles
-│   └── package.json      # Dependencies
-├── cadence/              # Smart contracts
-│   ├── contracts/        # Contract files
-│   │   └── AgentNFT.cdc  # Main NFT contract
-│   ├── transactions/     # Transaction scripts
-│   └── scripts/          # Query scripts
-├── .gitignore           # Git ignore rules
-├── flow.json            # Flow project configuration
-└── README.md           # This file
-
-```
 
 ---
 
