@@ -18,7 +18,7 @@ A comprehensive DeFi platform built on the Flow blockchain, featuring yield farm
 
 ## 🎯 Project Overview
 
-Flow Pilot leverages Forte Actions Flow's revolutionary transaction scheduling—to enable true on-chain DeFi automation. Users mint AI trading agents as NFTs, deposit tokens into mock yield farms, and enable automated strategies that execute and adapt, without manual intervention.
+Flow Pilot leverages Forte Actions Flow's revolutionary transaction scheduling to enable true on-chain DeFi automation. Users mint AI trading agents as NFTs, deposit tokens into mock yield farms, and enable automated strategies that execute and adapt, without manual intervention.
 
 ## 📋 Table of Contents
 
