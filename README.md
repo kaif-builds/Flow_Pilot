@@ -112,10 +112,7 @@ Pilot_FINAL/
 │   │   ├── analytics.tsx  # Analytics and data
 │   │   ├── farms.tsx      # Mint new Agent NFTs
 │   │   └── app.tsx        # Main app component
-│   ├── components/        # React components
-│   ├── lib/              # Utilities and helpers
-│   └── flow/             # Flow configuration
-│       └── config.ts     # FCL configuration
+│   └── components/        # React components
 ├── cadence/              # Smart contracts
 │   ├── contracts/        # Contract files
 │   │   └── AgentNFT.cdc  # Main NFT contract
@@ -123,7 +120,6 @@ Pilot_FINAL/
 │   └── scripts/          # Query scripts
 ├── flow.json            # Flow project configuration
 └── README.md           # This file
-
 ```
 
 ## 🚀 Installation & Setup
