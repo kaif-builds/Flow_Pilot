@@ -2,7 +2,7 @@
 
 
 
-A comprehensive DeFi platform built on the Flow blockchain, featuring Forte Actions automation, yield farming, and AI-powered trading agents. Flow Pilot demonstrates the future of decentralized finance with automated transaction scheduling, composable agent strategies, and a beautiful modern UI.
+A comprehensive DeFi platform built on the Flow blockchain, featuring yield farming, and AI-powered trading agents. Flow Pilot demonstrates the future of decentralized finance with automated transaction scheduling, composable agent strategies, and a beautiful modern UI.
 
 ---
 
