@@ -1,4 +1,52 @@
-## 👋 Welcome Flow Developer!
+## 🚀 Flow Pilot: The Future of Autonomous DeFi Automation
+
+
+
+A comprehensive DeFi platform built on the Flow blockchain, featuring Forte Actions automation, yield farming, and AI-powered trading agents. Flow Pilot demonstrates the future of decentralized finance with automated transaction scheduling, composable agent strategies, and a beautiful modern UI.
+
+---
+
+## 🌐 Live Demo & Resources
+
+- **Vercel Live Demo:** [https://flow-pilot-2gpx.vercel.app/](https://flow-pilot-2gpx.vercel.app/)
+- **YouTube Video Demo:** [https://youtu.be/qoouz4My9OI](https://youtu.be/qoouz4My9OI)
+- **Testnet Account Address:** `0x8b32c5ecee9fe36f`
+
+---
+
+## 🎯 Project Overview
+
+Flow Pilot leverages Forte Actions—Flow's revolutionary transaction scheduling—to enable true on-chain DeFi automation. Users mint AI trading agents as NFTs, deposit tokens into mock yield farms, and enable automated strategies that execute and adapt, without manual intervention.
+
+### Key Features
+
+- 🤖 **AI Trading Agents:** Mint agent NFTs with strategic automation
+- 🌾 **Yield Farming:** Multiple mock farms with various APYs and strategies
+- ⚡ **Forte Actions:** On-chain, scheduled, automated transactions
+- 💰 **MockUSDC Integration:** Fungible token for on-chain deposits/rewards
+- 📊 **Analytics:** Real-time agent and farm statistics, leaderboards
+- 🎨 **Modern UI:** Responsive, premium frontend (Next.js + Tailwind CSS)
+
+---
+
+## 🏗️ Architecture
+
+### Smart Contracts (Cadence)
+- `AgentNFT.cdc` — NFT contract for agents & strategies
+- `ForteTransactionScheduler.cdc` — Forte Actions custom scheduler
+- `MockUSDC.cdc` — Fungible token (deposits & rewards)
+- `MockFarm*.cdc` — Multiple mock farm contracts (APY/risk profiles)
+- `FlowTransactionScheduler.cdc` — Native transaction scheduler integration
+
+### Frontend (Next.js + React)
+- **Dashboard:** Monitor portfolio, agents, profits, fleet
+- **Forte Actions:** Enable/disable automation, view execution history
+- **Farms:** Mint agents, deposit/withdraw tokens
+- **Analytics:** Agent/farm performance, leaderboards, visualizations
+- **Agent Management:** Configure trading strategies
+
+---
+
 
 This project is a starting point for you to develop smart contracts on the Flow Blockchain. It comes with example contracts, scripts, transactions, and tests to help you get started.
 
