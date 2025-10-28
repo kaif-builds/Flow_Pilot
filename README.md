@@ -65,18 +65,19 @@ Here are some essential resources to help you hit the ground running:
 ## 📦 Project Structure
 
 Pilot_FINAL/
-├── cadence/
-│ ├── contracts/
-│ ├── scripts/
-│ ├── transactions/
-│ └── tests/
-├── frontend/
-│ ├── components/
-│ ├── pages/
-│ ├── styles/
-│ └── flow.config.js
-├── flow.json
-└── *.sh
+├── cadence/              # Flow smart contract resources
+│   ├── contracts/        # Cadence smart contracts (.cdc)
+│   ├── scripts/          # Read-only scripts for data queries
+│   ├── transactions/     # State-changing transaction scripts
+│   └── tests/            # Unit and integration tests
+├── frontend/             # Next.js + React frontend application
+│   ├── components/       # Modular React components
+│   ├── pages/            # Next.js page routes
+│   ├── styles/           # Tailwind/CSS stylesheets
+│   └── flow.config.js    # Flow client library (FCL) configuration
+├── flow.json             # Flow project global configuration
+└── *.sh                  # Shell scripts for setup/deployment
+
 
 ## 🚀 Quick Start
 
