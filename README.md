@@ -195,11 +195,16 @@ http://localhost:3000
     - See all your minted NFTs
     - Access NFT details and actions
     - Track your portfolio value
+<img width="1910" height="1033" alt="mmfinal" src="https://github.com/user-attachments/assets/0ebd0fa7-0af3-4f6f-8c99-c3692a7458f9" />
+   
 2. **Farms** (`/farms`)
     - Create and mint new Agent NFTs
     - Design your AI agents with custom attributes
     - Set agent name, description, and personality traits
     - Mint your agents to the blockchain
+<img width="1910" height="1033" alt="mm4" src="https://github.com/user-attachments/assets/72fc2de9-53c1-4db1-96ca-3716d89bfe66" />
+
+    
 3. **Buy/Sell** (`/buy-sell`)
     - Browse marketplace listings
     - Purchase Agent NFTs from other users
