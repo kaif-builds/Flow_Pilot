@@ -64,19 +64,26 @@ Here are some essential resources to help you hit the ground running:
 
 ## 📦 Project Structure
 
-Your project has been set up with the following structure:
+Pilot_FINAL/
+├── cadence/
+│ ├── contracts/
+│ ├── scripts/
+│ ├── transactions/
+│ └── tests/
+├── frontend/
+│ ├── components/
+│ ├── pages/
+│ ├── styles/
+│ └── flow.config.js
+├── flow.json
+└── *.sh
 
-- `flow.json` - This is the configuration file for your project (analogous to a `package.json` file for NPM).  It has been initialized with a basic configuration to get started.
-- `/cadence` - This is where your Cadence smart contracts code lives
+## 🚀 Quick Start
 
-Inside the `cadence` folder you will find:
-- `/contracts` - This folder contains your Cadence contracts (these are deployed to the network and contain the business logic for your application)
-  - `Counter.cdc`
-- `/scripts` - This folder contains your Cadence scripts (read-only operations)
-  - `GetCounter.cdc`
-- `/transactions` - This folder contains your Cadence transactions (state-changing operations)
-  - `IncrementCounter.cdc`
-- `/tests` - This folder contains your Cadence tests (integration tests for your contracts, scripts, and transactions to verify they behave as expected)
+### Prerequisites
+- Node.js 18+ and npm
+- Flow CLI installed
+- Git
 
 ## Running the Existing Project
 
