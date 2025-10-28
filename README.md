@@ -460,12 +460,6 @@ Contributions are welcome! Please follow these steps:
 
 ## *Built with ❤️ for the hackathon*
 
-## 📞 Support
-
-- **Documentation**: https://developers.flow.com/
-- **Discord**: https://discord.gg/flow
-- **GitHub Issues**: https://github.com/yourusername/Pilot_FINAL/issues
-
 ## 🙏 Acknowledgments
 
 - Flow Blockchain Team
