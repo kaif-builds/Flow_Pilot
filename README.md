@@ -106,10 +106,11 @@ Before you begin, ensure you have the following installed:
 Pilot_FINAL/
 ├── frontend/               # Next.js application
 │   ├── pages/             # Pages directory
-│   │   ├── dashboard.tsx  # User dashboard
-│   │   ├── leaderboards.tsx # Leaderboards page
+│   │   ├── dashboard.tsx  # User dashboard - View collection
+│   │   ├── leaderboards.tsx # Rankings and leaderboards
 │   │   ├── buy-sell.tsx   # Buy/Sell marketplace
-│   │   ├── analytics.tsx  # Analytics page
+│   │   ├── analytics.tsx  # Analytics and data
+│   │   ├── farms.tsx      # Mint new Agent NFTs
 │   │   └── app.tsx        # Main app component
 │   ├── components/        # React components
 │   ├── lib/              # Utilities and helpers
@@ -300,6 +301,10 @@ Navigate through the platform using these pages:
     - View market trends and data
     - Analyze NFT performance
     - Track your collection value
+5. **Farms** (`/farms`)
+    - Create and mint new Agent NFTs
+    - Design your AI agents with custom attributes
+    - Mint your agents to the blockchain
 
 ## 🐛 Troubleshooting
 
