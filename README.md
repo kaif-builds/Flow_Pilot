@@ -210,16 +210,23 @@ http://localhost:3000
     - Purchase Agent NFTs from other users
     - List your NFTs for sale
     - Make offers and complete transactions
+<img width="1910" height="1033" alt="mmbuy" src="https://github.com/user-attachments/assets/933c91fc-22cd-4675-bff3-5e7604f5fae8" />
+
+    
 4. **Leaderboards** (`/leaderboards`)
     - View top collectors and traders
     - Track marketplace statistics
     - See trending Agent NFTs
     - Compare your ranking
+<img width="1910" height="1033" alt="mmlead" src="https://github.com/user-attachments/assets/e1800259-3cac-4a70-b727-2942dcac99cf" />
+
+    
 5. **Analytics** (`/analytics`)
     - View market trends and data
     - Analyze NFT performance
     - Track your collection value
     - See historical transaction data
+<img width="1910" height="1033" alt="mmanl" src="https://github.com/user-attachments/assets/4638c43b-5f55-4a0f-95da-6d0342b836c7" />
 
 ---
 
