@@ -135,7 +135,7 @@ Pilot_FINAL/
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/kaif-builds/Pilot_FINAL.git
+git clone https://github.com/kaif-builds/Flow_Pilot.git
 cd Pilot_FINAL
 
 ```
