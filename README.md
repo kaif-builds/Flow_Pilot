@@ -230,7 +230,6 @@ http://localhost:3000
 2. **Farms** (`/farms`)
     - Create and mint new Agent NFTs
     - Design your AI agents with custom attributes
-    - Set agent name, description, and personality traits
     - Mint your agents to the blockchain
 <img width="1910" height="1033" alt="mm4" src="https://github.com/user-attachments/assets/72fc2de9-53c1-4db1-96ca-3716d89bfe66" />
 
